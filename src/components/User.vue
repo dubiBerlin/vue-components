@@ -10,10 +10,15 @@
               name: name ist das eigene Data Property
               $event: enthält den übergebenen Wert von Child Component im event
         welches der zweite Parameter ist.-->
-        <app-user-detail v-bind:myName="name" :resetFn="resetName" @nameWasReset="name = $event"></app-user-detail>
+        <app-user-detail
+          v-bind:myName="name"
+          :resetFn="resetName"
+          @nameWasReset="name = $event"
+          :userAge="age"
+        ></app-user-detail>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <app-user-edit></app-user-edit>
+        <app-user-edit :userAge="age" @ageWasChanged="age = $event"></app-user-edit>
       </div>
     </div>
   </div>
@@ -25,7 +30,7 @@ import UserEdit from "./UserEdit.vue";
 
 export default {
   data: function() {
-    return { name: "Dubravko" };
+    return { name: "Dubravko", age: 27 };
   },
   components: {
     appUserDetail: UserDetail,

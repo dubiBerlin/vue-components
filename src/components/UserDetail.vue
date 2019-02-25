@@ -3,6 +3,7 @@
     <h3>You may view the User Details here</h3>
     <p>Many Details</p>
     <p>User Name: {{myName}}</p>
+    <p>Age: {{userAge}}</p>
     <p>
       <button @click="switchName">Switch Name</button>
     </p>
@@ -24,6 +25,9 @@ export default {
     resetFn: {
       type: Function,
       required: true
+    },
+    userAge: {
+      type: Number
     }
   },
   methods: {
