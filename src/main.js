@@ -10,7 +10,13 @@ Vue.component("app-header", Header);
 Vue.component("app-footer", Footer);
 Vue.component("app-main", Main);
 
-export const eventBus = new Vue();
+export const eventBus = new Vue({
+  methods: {
+    changeAge(age) {
+      this.$emit("ageWasChanged", age);
+    }
+  }
+});
 
 new Vue({
   el: "#app",

@@ -14,8 +14,9 @@ export default {
   props: ["userAge"],
   methods: {
     editAge() {
-      this.age = 30;
-      eventBus.$emit("ageWasChanged", this.age);
+      this.userAge = 30;
+      //   eventBus.$emit("ageWasChanged", this.age);
+      eventBus.changeAge(this.userAge);
     }
   }
 };
