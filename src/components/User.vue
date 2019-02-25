@@ -6,7 +6,11 @@
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <app-user-detail v-bind:myName="name"></app-user-detail>
+        <!--  @nameWasReset: ist das event was im child definiert wurde
+              name: name ist das eigene Data Property
+              $event: enthält den übergebenen Wert von Child Component im event
+        welches der zweite Parameter ist.-->
+        <app-user-detail v-bind:myName="name" @nameWasReset="name = $event"></app-user-detail>
       </div>
       <div class="col-xs-12 col-sm-6">
         <app-user-edit></app-user-edit>

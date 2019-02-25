@@ -30,7 +30,10 @@ export default {
         .join("");
     },
     resetName() {
-      this.myName = "Alo";
+      this.myName = "Name is reseted!";
+      // $emit gibt ein event an das Parent zurück
+      // und den Wert als zweiten Param.
+      this.$emit("nameWasReset", this.myName);
     }
   }
 };
