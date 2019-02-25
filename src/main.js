@@ -10,6 +10,8 @@ Vue.component("app-header", Header);
 Vue.component("app-footer", Footer);
 Vue.component("app-main", Main);
 
+export const eventBus = new Vue();
+
 new Vue({
   el: "#app",
   render: h => h(App)
