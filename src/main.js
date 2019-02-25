@@ -14,6 +14,12 @@ export const eventBus = new Vue({
   methods: {
     changeAge(age) {
       this.$emit("ageWasChanged", age);
+    },
+    selectServer(server){
+      this.$emit("serverSelected", server);
+    },
+    changeServerStatus(status){
+      this.$emit("statusChanged", status);
     }
   }
 });

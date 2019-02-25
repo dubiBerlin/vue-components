@@ -1,4 +1,4 @@
-<!--<template>
+<template>
   <div class="container">
     <app-header></app-header>
     <app-main></app-main>
@@ -15,9 +15,9 @@ export default {
 </script>
 
 <style>
-</style> -->
+</style> 
 
-<template>
+<!--<template>
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -42,5 +42,5 @@ div.component {
   border: 1px solid black;
   padding: 30px;
 }
-</style>
+</style>-->
 
