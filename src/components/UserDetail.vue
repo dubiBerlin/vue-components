@@ -7,7 +7,7 @@
       <button @click="switchName">Switch Name</button>
     </p>
     <p>
-      <button @click="resetName">Reset Name</button>
+      <button @click="resetFn()">Reset Name</button>
     </p>
   </div>
 </template>
@@ -20,6 +20,10 @@ export default {
       type: String,
       required: true
       // default:"Daniel"
+    },
+    resetFn: {
+      type: Function,
+      required: true
     }
   },
   methods: {
